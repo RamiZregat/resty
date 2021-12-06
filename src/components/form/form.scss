@@ -11,6 +11,9 @@ form {
     margin: 1rem 0;
 
     &.methods {
+      .clickedSpan{
+        background: red !important;
+      }
       span {
         cursor: pointer;
         margin-right: 1rem;
