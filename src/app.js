@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './app.scss';
 
@@ -8,15 +8,34 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Form from './components/form';
 import Results from './components/results';
+import axios from 'axios';
 
 export default function App(props){
 const [data,setData]=useState(null);
 const [requestParams,setRequestParams]=useState({});
-const [textArea,setTextArea]=useState('');
+const [requestBody,setRequestBody]=useState({});
 const [loading,setLoading]=useState(false);
 
 
-const callApi=(requestParams,textArea)=>{
+useEffect(async () => {
+  if (requestParams.url) {
+    if (requestBody) {
+      const data = await axios[requestParams.method.toLowerCase()](requestParams.url, JSON.parse(requestBody));
+      setData(data);
+
+
+    } else {
+      const data = await axios[requestParams.method.toLowerCase()](requestParams.url);
+      setData(data);
+
+
+    }
+  }
+  setLoading(false);
+}, [requestParams]);
+
+
+const callApi=(requestParams,requestBody)=>{
   const data = {
     count: 2,
     results: [
@@ -25,8 +44,9 @@ const callApi=(requestParams,textArea)=>{
     ],
   };
   setData(data);
+  setRequestBody(requestBody);
   setRequestParams(requestParams);
-  setTextArea(textArea);
+
 }
 const showLoading=()=>{
   setLoading(true);
@@ -40,7 +60,7 @@ return (
     <Header />
     {loading?(
       <>
-     <div>Loading</div>
+     <div class="spinner"></div>
       </>
     ):(
       <>
