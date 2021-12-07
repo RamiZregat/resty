@@ -43,8 +43,8 @@
 
 ### Links:
 
-- [Pull Request](https://github.com/RamiZregat/resty/pull/6)
-- [Deployed link](github.com/RamiZregat/resty.)
+- [Pull Request](https://github.com/RamiZregat/resty/pull/7)
+- [Deployed link](https://ramizregat-resty.netlify.app)
 
 ### Setup
 
