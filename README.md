@@ -44,7 +44,7 @@
 ### Links:
 
 - [Pull Request](https://github.com/RamiZregat/resty/pull/4)
-- [Deployed link](https://ramizregat.github.io/resty/)
+- [Deployed link](github.com/RamiZregat/resty.)
 
 ### Setup
 
