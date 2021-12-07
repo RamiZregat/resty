@@ -40,20 +40,20 @@ export default function form(props) {
       method: id,
       url: urlSend,
     };
-    let textArea='';
+    let requestBody='';
     if (id === "POST" || id === "PUT") {
-      textArea=e.target.textArea.value;
+      requestBody=e.target.requestBody.value;
     }
     props.showLoading();
-    props.handleApiCall(formData,textArea);
-    props.hideLoading();
+    props.handleApiCall(formData,requestBody);
+
   };
 
   return (
     <>
       <form onSubmit={handleSubmit}>
         <label>
-          <span>URL: </span>
+          <span class="url">URL : </span>
           <input  name="url" type="text" />
           <button data-testid='goBtn' type="submit">GO!</button>
         </label>
@@ -71,7 +71,7 @@ export default function form(props) {
             DELETE
           </span>
         </label>
-        {showtext ? <input id="textArea" /> : null}
+        {showtext ? <input id="requestBody" /> : null}
       </form>
     </>
   );

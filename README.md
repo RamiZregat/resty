@@ -37,3 +37,21 @@
 ### UML:
 
 ![](./img/lab27uml.jpg)
+
+
+## Lab 28
+
+### Links:
+
+- [Pull Request](https://github.com/RamiZregat/resty/pull/4)
+- [Deployed link](https://ramizregat.github.io/resty/)
+
+### Setup
+
+#### Running the app
+
+- `npm start`
+
+### UML:
+
+![](./img/lab28uml.jpg)
