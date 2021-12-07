@@ -43,7 +43,7 @@
 
 ### Links:
 
-- [Pull Request](https://github.com/RamiZregat/resty/pull/4)
+- [Pull Request](https://github.com/RamiZregat/resty/pull/6)
 - [Deployed link](github.com/RamiZregat/resty.)
 
 ### Setup
