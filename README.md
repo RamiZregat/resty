@@ -55,3 +55,21 @@
 ### UML:
 
 ![](./img/lab28uml.jpg)
+
+
+## Lab 29
+
+### Links:
+
+- [Pull Request](https://github.com/RamiZregat/resty/pull/7)
+- [Deployed link](https://ramizregat-resty.netlify.app)
+
+### Setup
+
+#### Running the app
+
+- `npm start`
+
+### UML:
+
+![](./img/lab28uml.jpg)
